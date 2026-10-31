@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic profile of Pankaj Chaudhary — subsurface CO₂ storage, reservoir geomechanics, and sustainable energy.">
+  <title>Pankaj Chaudhary | Research Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --teal: #0f766e;
+      --ink: #172b3a;
+      --muted: #627386;
+      --line: #e2e8f0;
+      --paper: #ffffff;
+      --wash: #f4f8fc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: "DM Sans", sans-serif; line-height: 1.65;
+    }
+    a { color: inherit; }
+    .topbar {
+      position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1080px; margin: auto; padding: 15px 24px;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    }
+    .brand { font-family: Manrope, sans-serif; font-weight: 800; color: var(--navy); letter-spacing: -.04em; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; font-size: .92rem; }
+    .navlinks a { text-decoration: none; color: var(--muted); }
+    .navlinks a:hover { color: var(--blue); }
+    .hero {
+      background: radial-gradient(circle at 85% 20%, rgba(37,99,235,.16), transparent 28%),
+                  linear-gradient(135deg, #f6faff 0%, #edf5fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-inner {
+      max-width: 1080px; margin: auto; padding: 82px 24px 76px;
+      display: grid; grid-template-columns: 1.6fr .8fr; gap: 54px; align-items: center;
+    }
+    .eyebrow {
+      color: var(--teal); text-transform: uppercase; letter-spacing: .16em;
+      font-size: .76rem; font-weight: 700; margin: 0 0 16px;
+    }
+    h1, h2, h3 { font-family: Manrope, sans-serif; color: var(--navy); line-height: 1.2; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); letter-spacing: -.055em; margin: 0 0 14px; }
+    .subtitle { font-size: clamp(1.08rem, 2vw, 1.35rem); color: #38536b; margin: 0 0 22px; font-weight: 600; }
+    .intro { max-width: 650px; color: #52677a; font-size: 1.05rem; margin-bottom: 30px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border-radius: 9px; padding: 12px 17px; font-weight: 700; text-decoration: none;
+      border: 1px solid transparent; transition: transform .15s ease, background .15s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .primary { background: var(--blue); color: white; }
+    .primary:hover { background: var(--blue-dark); }
+    .secondary { background: white; color: var(--navy); border-color: #cbd8e5; }
+    .profile-card {
+      background: white; border: 1px solid #dce6f0; border-radius: 20px; padding: 27px;
+      box-shadow: 0 18px 50px rgba(16,36,58,.08);
+    }
+    .monogram {
+      width: 76px; height: 76px; display: grid; place-items: center; border-radius: 20px;
+      background: linear-gradient(135deg, var(--navy), #2563eb); color: white;
+      font: 800 1.55rem Manrope, sans-serif; margin-bottom: 20px;
+    }
+    .profile-card h2 { font-size: 1.2rem; margin: 0 0 5px; }
+    .profile-card p { color: var(--muted); font-size: .92rem; margin: 0; }
+    .card-line { height: 1px; background: var(--line); margin: 20px 0; }
+    .quick-link { display: flex; justify-content: space-between; gap: 10px; padding: 8px 0; text-decoration: none; font-weight: 600; font-size: .92rem; }
+    .quick-link span:last-child { color: var(--blue); }
+    main { max-width: 1080px; margin: auto; padding: 0 24px; }
+    section { padding: 68px 0; border-bottom: 1px solid var(--line); }
+    .section-heading { margin-bottom: 27px; }
+    .section-heading .eyebrow { margin-bottom: 9px; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.45rem); letter-spacing: -.04em; margin: 0 0 12px; }
+    .section-lead { color: var(--muted); max-width: 720px; margin: 0; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .info-card {
+      border: 1px solid var(--line); border-radius: 14px; padding: 23px;
+      background: white;
+    }
+    .info-card h3 { margin: 0 0 9px; font-size: 1.1rem; }
+    .info-card p { margin: 0; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .tag { padding: 8px 12px; border-radius: 999px; background: #edf4ff; color: #244c8a; font-size: .88rem; font-weight: 600; }
+    .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .tool { border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+    .tool strong { display: block; color: var(--navy); margin-bottom: 4px; }
+    .tool span { color: var(--muted); font-size: .9rem; }
+    .profile-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .profile-link {
+      display: flex; align-items: center; justify-content: space-between; gap: 15px;
+      padding: 22px; border: 1px solid var(--line); border-radius: 14px;
+      text-decoration: none; transition: border-color .15s, transform .15s;
+    }
+    .profile-link:hover { border-color: #93b4ed; transform: translateY(-2px); }
+    .profile-link strong { display: block; color: var(--navy); }
+    .profile-link small { color: var(--muted); }
+    .arrow { color: var(--blue); font-size: 1.3rem; }
+    .contact-box {
+      background: var(--navy); color: #dbe7f2; border-radius: 18px; padding: 34px;
+      display: flex; justify-content: space-between; align-items: center; gap: 24px;
+    }
+    .contact-box h2 { color: white; margin-bottom: 8px; }
+    .contact-box p { margin: 0; color: #c3d1df; }
+    footer { max-width: 1080px; margin: auto; padding: 24px; color: var(--muted); font-size: .85rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .navlinks { gap: 14px; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 55px; gap: 30px; }
+      .two-col, .profile-links { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: 1fr 1fr; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 440px) { .tools-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">Pankaj Chaudhary</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#methods">Methods &amp; Tools</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Academic &amp; Research Profile</p>
+        <h1>Pankaj<br>Chaudhary</h1>
+        <p class="subtitle">PhD Research Scholar · Subsurface Energy &amp; Geomechanics</p>
+        <p class="intro">
+          Researching subsurface CO₂ storage and energy systems, with a focus on reservoir
+          geomechanics, coupled processes, and the safe, sustainable use of the subsurface.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://scholar.google.com/citations?user=0SsKvygAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+          <!-- Replace YOUR-LINKEDIN-USERNAME with your LinkedIn profile URL. -->
+          <a class="button secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="button secondary" href="#research">Explore research ↓</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="monogram" aria-label="Initials PC">PC</div>
+        <h2>Research at a glance</h2>
+        <p>Subsurface flow · CO₂ sequestration · Reservoir geomechanics</p>
+        <div class="card-line"></div>
+        <a class="quick-link" href="#research"><span>Research focus</span><span>↗</span></a>
+        <a class="quick-link" href="#methods"><span>Methods &amp; tools</span><span>↗</span></a>
+        <a class="quick-link" href="#profiles"><span>Academic profiles</span><span>↗</span></a>
+      </aside>
+    </div>
+  </div>
+
+  <main>
+    <section id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / About</p>
+        <h2>About me</h2>
+        <p class="section-lead">
+          I work on understanding the behaviour of fluids and rocks in the subsurface,
+          particularly where injection-driven pressure and temperature changes interact
+          with reservoir and caprock integrity.
+        </p>
+      </div>
+      <div class="two-col">
+        <article class="info-card">
+          <h3>Research direction</h3>
+          <p>Coupled hydro-mechanical and thermo-hydro-mechanical modelling for geological CO₂ storage and subsurface energy applications.</p>
+        </article>
+        <article class="info-card">
+          <h3>Research objective</h3>
+          <p>Improve understanding of subsurface processes that influence storage performance, injectivity, and geomechanical integrity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Research</p>
+        <h2>Research interests</h2>
+        <p class="section-lead">Topics I am interested in exploring through numerical modelling, physical understanding, and quantitative analysis.</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Geological CO₂ sequestration</span>
+        <span class="tag">Reservoir geomechanics</span>
+        <span class="tag">Thermo-hydro-mechanical coupling</span>
+        <span class="tag">Faulted and fractured reservoirs</span>
+        <span class="tag">Multiphase flow in porous media</span>
+        <span class="tag">Caprock integrity</span>
+        <span class="tag">Permeability heterogeneity</span>
+        <span class="tag">CCUS and subsurface energy storage</span>
+      </div>
+    </section>
+
+    <section id="methods">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Methods</p>
+        <h2>Methods &amp; tools</h2>
+        <p class="section-lead">Numerical modelling and computational tools relevant to subsurface flow and coupled reservoir processes.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool"><strong>COMSOL Multiphysics</strong><span>Coupled physics and porous-media modelling</span></div>
+        <div class="tool"><strong>MATLAB</strong><span>Numerical methods and data processing</span></div>
+        <div class="tool"><strong>Python</strong><span>Scientific computing and analysis</span></div>
+        <div class="tool"><strong>MRST</strong><span>Reservoir simulation</span></div>
+        <div class="tool"><strong>PorePy</strong><span>Fractured porous-media modelling</span></div>
+        <div class="tool"><strong>OpenGeoSys</strong><span>Coupled thermo-hydro-mechanical processes</span></div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="section-heading">
+        <p class="eyebrow">04 / Connect</p>
+        <h2>Find me online</h2>
+        <p class="section-lead">Visit my academic and professional profiles for publications, research updates, and professional background.</p>
+      </div>
+      <div class="profile-links">
+        <a class="profile-link" href="https://scholar.google.com/citations?user=0SsKvygAAAAJ&hl=en" target="_blank" rel="noopener">
+          <span><strong>Google Scholar</strong><small>Publications and citations</small></span><span class="arrow">↗</span>
+        </a>
+        <a class="profile-link" href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" target="_blank" rel="noopener">
+          <span><strong>LinkedIn</strong><small>Professional experience and updates</small></span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" style="border-bottom:0;">
+      <div class="contact-box">
+        <div>
+          <p class="eyebrow" style="color:#8ed8cf;">05 / Contact</p>
+          <h2>Let’s connect</h2>
+          <p>Open to research discussions and collaborations in subsurface energy, CO₂ storage, and reservoir geomechanics.</p>
+        </div>
+        <a class="button secondary" href="https://scholar.google.com/citations?user=0SsKvygAAAAJ&hl=en" target="_blank" rel="noopener">View research ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Pankaj Chaudhary</span>
+    <span>Academic profile · Hosted with GitHub Pages</span>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
